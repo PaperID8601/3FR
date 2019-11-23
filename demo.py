@@ -13,7 +13,7 @@ import landmarks.lmutils as lmutils
 from torchvision import transforms as tf
 from utils import face_processing as fp
 
-snapshot_dir = os.path.join(cfg.MODEL_DIR, 'snapshots')
+snapshot_dir = os.path.join('.')
 from utils import nn, vis, face_processing
 
 
@@ -68,7 +68,7 @@ if __name__ == '__main__':
     import landmarks.lmconfig as lmcfg
 
     lmcfg.config_landmarks('wflw')
-    modelname = 'lms_wflw/00190'
+    modelname = 'lms_wflw'
     net = saae.load_net(modelname)
     net.eval()
 
